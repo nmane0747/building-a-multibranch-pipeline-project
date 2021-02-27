@@ -1,8 +1,11 @@
 pipeline {
     
     agent {
+        
+        {
       
-            docker 'maven:3.5-alpine'
+            docker 'maven:3-5-alpine
+        }
           
         
     }
@@ -13,6 +16,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+               
                 sh 'mvn --version'
             }
         }
