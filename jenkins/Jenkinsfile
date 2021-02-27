@@ -1,10 +1,10 @@
 pipeline {
     
     agent {
-        any {
+      
             docker 'maven:3.5-alpine'
           
-        }
+        
     }
     
     environment {
