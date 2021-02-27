@@ -2,9 +2,13 @@ pipeline {
     
     agent {
         
+        node
+        {
+            
+            label 'docker'
         
       
-            docker 'maven:3-5-alpine'
+            
         }
           
         
@@ -16,7 +20,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-               
+                sh 'docker run maven:3-5-alpine'
                 sh 'mvn --version'
             }
         }
